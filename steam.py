@@ -13,11 +13,12 @@ class Wishlist:
         self.games = []
         for i in range(self.length):
             title = w_list[self.key_list[i]]['name']
+            capsule = w_list[self.key_list[i]]['capsule']
             try:
                 steam_price  = float(w_list[self.key_list[i]]['subs'][0]['price'])/100
             except IndexError:
                 steam_price = None
-            new_game = Game(title,steam_price)
+            new_game = Game(title,steam_price,capsule)
             self.games.append(new_game)
     def __str__(self):
         output = ''
@@ -26,10 +27,11 @@ class Wishlist:
         return output
         
 class Game:
-    def __init__(self,title='',steam_price=''):
+    def __init__(self,title='',steam_price='',capsule=''):
         self.title = title
         self.itad_title = self.itad_parse()
         self.steam_price = steam_price
+        self.capsule=capsule
         self.epic_price = None
         self.epic_url = None
         self.gog_price = None
