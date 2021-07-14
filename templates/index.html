@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}Steam Wishlist Finder{% endblock %}
+
+{% block main %}
+
+<div class="card-panel blue-grey darken-4">
+    <div class="row">
+        <form class="col s12" action=''>
+            <div class="row" id='steam_username_input'>
+                <div class="input-field col s6">
+                    <input id='input_text' type='text'>
+                    <label for ='input_text'>Steam username</label>
+                </div>
+                <div class="col s6">
+                    <button class='waves-effect waves-light btn-large' type='submit' action=''>Submit</button>
+                </div>    
+            </div>
+            
+        </form>
+    </div>
+</div>
+
+{% endblock %}
