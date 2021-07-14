@@ -3,16 +3,16 @@
 
 {% block main %}
 
-<div class="card-panel blue-grey darken-4">
+<div class="card-panel">
     <div class="row">
-        <form class="col s12" action=''>
+        <form class="col s12" action='result' method='POST'>
             <div class="row" id='steam_username_input'>
                 <div class="input-field col s6">
-                    <input id='input_text' type='text'>
-                    <label for ='input_text'>Steam username</label>
+                    <input id='username' type='text' name='username'>
+                    <label for ='username'>Steam username</label>
                 </div>
                 <div class="col s6">
-                    <button class='waves-effect waves-light btn-large' type='submit' action=''>Submit</button>
+                    <button class='waves-effect waves-light btn-large' type='submit'>Submit</button>
                 </div>    
             </div>
             
